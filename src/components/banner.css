@@ -1,0 +1,7 @@
+.banner{
+    background-image: url(./../../public/banner\ component.jpg);
+    height: 40vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

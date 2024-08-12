@@ -1,0 +1,219 @@
+@import 'aos/dist/aos.css';
+
+/* :root {
+    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Amatic SC",  sans-serif;
+    --nav-font: "Inter",  sans-serif;
+} */
+  
+body{
+    background: #d7ffff!important;
+}
+
+/* styling the navbar */
+.loading_img{
+    width: 13rem!important;
+}
+
+.nav-item a{
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.nav-item a:hover{
+    color: #1E88E5 !important;
+    transform: .3s ease-in-out;
+}
+
+.logo{
+    width: 160px !important;
+    object-fit: contain !important;
+}
+
+
+/* styling the hero/banner */
+.intro h1{
+    font-size: 3rem !important;
+}
+
+.intro p{
+    font-size: 20px !important;
+    color: #808080;
+}
+
+.intro .btn{
+    color: #ffffff !important;
+}
+
+.icon-search{
+    font-size: 40px;
+    color: #ffffff !important;
+    padding: 5px;
+    position: absolute;
+    top: 32%;
+    right: 12%;
+    background: #31D2F2;
+    border-radius: 50%;
+}
+
+.card-body h5, p{
+    text-align: center;
+}
+
+.icon{
+    padding-top: 5px;
+    margin: auto;  
+    font-size: 3rem;
+    color: #31D2F2;
+}
+
+span{
+    color: #1E88E5;
+}
+
+/* styling the category section */
+.card-image{
+    height: 12rem;
+    filter: contrast(1.5) !important; 
+}
+
+.category-btn{
+    margin-left: 30%;
+    margin-top: 45%;
+}
+
+/* footer section */
+a{
+    text-decoration: none !important;
+    color: #000 !important;   
+}
+
+.footer p{
+    color: #808080;
+}
+
+/* 404 */
+.notfound-img{
+    margin-left: 25%;
+}
+
+#homeBtn{
+    margin-left: 43%;
+}
+
+/* profile */
+.profile-card{
+    height: 15rem;
+}
+
+.profile-img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: auto !important;
+}
+
+.profile-title{
+    margin-bottom: 125px !important;
+}
+
+.card-img-top{
+    height: 14rem;
+    object-fit: cover;
+}
+
+.profile-image{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 2%;
+    bottom: -20%;
+}
+
+/* post section */
+.post{
+    margin-top: 5rem !important;
+}
+.card-post{
+    height: 3rem;
+    margin: auto !important;
+}
+
+.upload-icon{
+    cursor: pointer;
+}
+
+/* posted job */
+.profile_img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+
+
+@media (max-width:576px) { 
+
+    .search{
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    input{
+        font-size: 10px !important;
+    }
+
+    .search{
+        position: relative;
+    }
+
+    .icon-search{
+        position: absolute;
+        top: 68%;
+        right: 5%;
+    }
+
+    .group img{
+        width: 18rem;
+    }
+
+    .notfound-img{
+        width: 19rem;
+        margin: auto;
+    }
+
+    #homeBtn{
+        margin-left: 6rem;
+    }
+
+    .select-category{
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width:820px){
+    .posted-job{
+        margin-left: 7.5rem;
+    }
+
+    
+}
+
+@media(max-width:912px){
+    .posted-job{
+        margin-left: 7.5rem;
+    }
+
+    
+}
+
+@media(max-width:540px){
+    .posted-job{
+        margin: auto !important;
+        margin-top: 2rem !important;
+    }
+
+    
+}
