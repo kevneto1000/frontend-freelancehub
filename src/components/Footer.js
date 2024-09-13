@@ -28,7 +28,7 @@ function Footer() {
             <div className="col-md-3 col-lg-3 col-sm-6 my-5">
                 <h5 className="text-start">For Freelancers</h5>
                 <ul className="list-unstyled text-start">
-                    <li><a href="#">Find Work</a></li>
+                    <li><Link to={"/work"}>Find Work</Link></li>
                     <li><Link to={"/signup"}>Create Account</Link></li>
                 </ul>
             </div>

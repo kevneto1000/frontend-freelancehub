@@ -8,7 +8,8 @@ function Faq() {
             <Navbar/>
             <Banner
                 text="How can we help?"
-                img={("./../../banner component.jpg")}
+                img={("./../../breadcrumb-bg.png")}
+                link="FAQ"
             />
 
             <div className="container mt-5">

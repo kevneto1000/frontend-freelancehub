@@ -3,20 +3,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from "./components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useSelector } from'react-redux'
+// import { useSelector } from'react-redux'
 
 const Home = React.lazy(() => import("./pages/Home"))
 const Login = React.lazy(() => import("./pages/Login"))
 const Signup = React.lazy(() => import("./pages/Signup"))
+const Job = React.lazy(() => import("./pages/Job"))
 const Profile = React.lazy(() => import("./pages/Profile"))
+const Message = React.lazy(() => import("./pages/Message"))
 const Freelance = React.lazy(() => import("./pages/Freelance"))
+const Work = React.lazy(() => import("./pages/Work"))
 const Notfound = React.lazy(() => import("./pages/Notfound"))
 const Faq = React.lazy(() => import("./pages/Faq"))
 const Post = React.lazy(() => import("./pages/Post"))
 
 function App() {
 
-  const login = useSelector((state) => state.user.login)
+  // const login = useSelector((state) => state.user.login)
 
   useEffect(() => {
      
@@ -41,9 +44,12 @@ function App() {
           <Route path="/" element={ <Home/> } />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/job" element={<Job />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/freelance" element={<Freelance />} />
+          <Route path="/work" element={<Work />} />
           <Route path="/post" element={<Post />} />
+          <Route path="/message" element={<Message />} />
           <Route path="*" element={<Notfound />} />
           <Route path="/faq" element={<Faq />} />
         </Routes>

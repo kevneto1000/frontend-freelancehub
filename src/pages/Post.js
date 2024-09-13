@@ -22,9 +22,19 @@ function Post() {
     }
   };
 
+  const [position, setposition] = useState(null)
+  const [post, setpost] = useState("")
+
   const [user, setuser] = useState(null)
   let id = useSelector((state) => state.user.data.id)
 
+  useEffect(() => {
+
+    axios.get("http://localhost:8000/allpositions/")
+      .then((response) => setposition(response.data))
+      .catch((error) => console.log(error))
+
+  }, [])
 
   useEffect(() => {
 
@@ -85,7 +95,7 @@ function Post() {
       let data = new FormData(e.currentTarget);
 
       await axios.post(`http://localhost:8000/post/${id}`, data)
-        .then((response) =>  alert("success") )
+        .then((response) => console.log(response.data))
         .catch((error) => {
           console.log(error.response.data)
         })
@@ -151,7 +161,16 @@ function Post() {
                         <div className="modal-title" id="modalTitleId">
                           <div className='d-flex gap-4'>
                             <input type="text" name='title' className='form-control rounded-1 card-post' placeholder='Post Title' />
-                            <input type="text" name='position' className='form-control rounded-1 card-post' placeholder='Post Position' />
+                            <div>
+                              <input type="text" name='position' list='cat' className='form-control rounded-1 card-post' placeholder='Post Position' />
+                              <datalist id='cat'>
+                                {
+                                  position?.map((position) => (
+                                    <option key={position?.id} value={position?.id}>{position?.name}</option>
+                                  ))
+                                }
+                              </datalist>
+                            </div>
                             <input type="text" name='company_name' className='form-control rounded-1 card-post' placeholder='Company Name' />
                           </div>
                         </div>
@@ -278,14 +297,14 @@ function Post() {
                 <div className="posted-job-item">
                   <h5 name="title" className='text-start fw-bolder'>Searching for Web developer</h5>
                   <p name="position" className='fw-bold text-start'>Frontend</p>
-                  <p name="description" className='text-start'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quas explicabo delectus ex velit perferendis aut dolorem numquam iure excepturi nam.
-                  </p>
                   <div className="posted-job-img">
                     <img src={("./../../IT dev.webp")} name="image" className='img-fluid' alt="" />
                   </div>
+                  <p name="description" className='text-start mt-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quas explicabo delectus ex velit perferendis aut dolorem numquam iure excepturi nam.
+                  </p>
                   <div className="posted-job-info d-flex justify-content-around mt-3">
-                    <p name="price">Amount: $1500.00</p>
+                    <p name="price"><span className='fw-bold text-black'>Amount:</span> $1500.00</p>
                     <p name="company_name">Company Name</p>
                     <p name="country, states, city">Country, State, City</p>
                   </div>

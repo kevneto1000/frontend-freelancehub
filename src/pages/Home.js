@@ -1,6 +1,5 @@
 import React from 'react'
-import Navbar from "../components/Navbar";
-import { BiSearchAlt } from "react-icons/bi"
+import Navbar from "../components/Navbar"
 import { MdSwitchAccount } from "react-icons/md"
 import { MdOutlineContentPasteSearch } from "react-icons/md"
 import { TbWorldDownload } from "react-icons/tb"
@@ -11,10 +10,10 @@ function Home() {
   return (
 
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="container">
         {/* banner */}
-        <div className="row">
+        <div className="row mt-5">
           <div className="col-md-6">
             <div className="p-5 mb-4 rounded-3">
               <div className="container-fluid py-5 intro">
@@ -22,15 +21,9 @@ function Home() {
                 <p className="col-md-8 fs-4 my-4 text-start">
                   Hire Great Freelancers. Freelance Hub helps you hire elite freelancers at a moment's notice.
                 </p>
-                <div className='d-md-flex gap-3 position-relative'>
+                <div className='mt-3'>
                   <Link to={"/freelance"} className="btn btn-info btn-lg" type="button">
                     Hire a freelancer
-                  </Link>
-                  <form className='search' action="">
-                    <input type="text" className='form-control py-3 px-5 w-100' placeholder='search freelance work' />
-                  </form>
-                  <Link to='/freelance'>
-                    <BiSearchAlt className="icon-search" size={25} />
                   </Link>
                 </div>
               </div>
@@ -96,7 +89,7 @@ function Home() {
 
           <CategoryCard
             img={("./../../IT dev.webp")}
-            title={"Programming & Tech"}
+            title={"Development & IT"}
           />
 
           <CategoryCard
@@ -129,10 +122,10 @@ function Home() {
             title={"Admin & Customer Support"}
           />
 
-          <div className="col-md-3 mb-lg-4">
-            <button className='btn btn-info category-btn'>More Categories</button>
-          </div>
-
+          <CategoryCard
+            img={("./../../Architecture.jpg")}
+            title={"Architecture"}
+          />
 
         </div>
       </div>
